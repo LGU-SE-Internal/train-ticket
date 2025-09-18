@@ -12,7 +12,7 @@ skywalking:
 
 opentelemetry:
   enabled: true
-  image: 10.10.10.240/library/autoinstrumentation-java:elastic
+  image: volc-infra-us-ai-cn-beijing.cr.volces.com/pair-diag/autoinstrumentation-java:elastic
 
 services:
   tsAdminBasicInfoService:

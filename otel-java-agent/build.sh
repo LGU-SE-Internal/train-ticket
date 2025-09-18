@@ -1,2 +1,2 @@
-docker build -t 10.10.10.240/library/autoinstrumentation-java:elastic .
-docker push 10.10.10.240/library/autoinstrumentation-java:elastic
+docker build -t volc-infra-us-ai-cn-beijing.cr.volces.com/pair-diag/autoinstrumentation-java:elastic .
+docker push volc-infra-us-ai-cn-beijing.cr.volces.com/pair-diag/autoinstrumentation-java:elastic
