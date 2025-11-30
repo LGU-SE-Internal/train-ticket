@@ -1,5 +1,7 @@
 package waitorder;
 
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Info;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.client.RestTemplateBuilder;
@@ -10,13 +12,16 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.integration.annotation.IntegrationComponentScan;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.web.client.RestTemplate;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableAspectJAutoProxy(proxyTargetClass = true)
 @EnableAsync
 @IntegrationComponentScan
-@EnableSwagger2
+@OpenAPIDefinition(info = @Info(
+    title = "Wait Order Service API",
+    version = "1.0",
+    description = "Train Ticket Wait Order Service - Manage waitlist orders"
+))
 public class WaitOrderApplication {
 
     public static void main(String[] args) {
