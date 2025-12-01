@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import verifycode.service.VerifyCodeService;
 
 import javax.imageio.ImageIO;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -52,6 +52,6 @@ public class VerifyCodeController {
 
         boolean result = verifyCodeService.verifyCode(request, response, verifyCode, headers);
         LOGGER.info("[verifyCode][verify result: {}]", result);
-        return true;
+        return result;
     }
 }
